@@ -1,7 +1,7 @@
 <template>
   <div id="app">
       <TheNavigation/>
-      <transition name="slide" mode="out-in">
+      <transition name="fade">
         <router-view/>
       </transition>
   </div>
@@ -25,13 +25,11 @@ export default{
   text-align: center;
   color: #2c3e50;
 }
-.slide-enter, .slide-leave-to{
+.fade-enter, .fade-leave-to{
   opacity:0; 
-  transform: translateX(100%);
-
 }
-.slide-enter-active, .slide-leave-active{
-  transition: opacity 1s, transform 1s;
+.fade-enter-active, .fade-leave-active{
+  transition: opacity 0.3s;
 }
 
 </style>

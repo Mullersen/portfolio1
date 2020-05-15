@@ -20,10 +20,10 @@ const routes = [{
             import ( /* webpackChunkName: "about" */ '../views/Skills.vue')
     },
     {
-        path: '/projects', // the path of the route
-        name: 'Projects', //the name of the component to easily refer to this route
+        path: '/work', // the path of the route
+        name: 'Work', //the name of the component to easily refer to this route
         component: () =>
-            import ( /* webpackChunkName: "projects" */ '../views/Projects.vue'), //this is the view-component you want to render when this internal link is clicked. 
+            import ( /* webpackChunkName: "projects" */ '../views/Work.vue'), //this is the view-component you want to render when this internal link is clicked. 
     },
     {
         path: '/contact',

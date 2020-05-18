@@ -1,16 +1,49 @@
 <template>
-<div class="projects">
-  <h2>this is where the projects will be</h2>
-  <h4>this is just a test</h4>
-</div>
+  <section class="projects">
+    <div class="columns is-vcentered" style="height: 100vh;">
+      <div id="columnWrapper" class="column">
+        <div class="columns">
+          <div class="column">
+            <div class="card">
+              <div class="card-image">
+                <figure>
+                  <img src="@/assets/routeMap.png" alt="">
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+
+          </div>
+          <div class="column">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
+<style scoped>
+.projects {
+  background-color: #b8e0d2;
+}
+/* #columnWrapper{
+  margin-left:10vw;
+} */
+@media (max-width: 750px){
+  #columnWrapper{
+  margin-left:0vw;
+  margin-top:17vh;
+}
+}
 </style>

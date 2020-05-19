@@ -10,11 +10,18 @@
                 <div class="media">
                   <div class="media-content">
                     <div class="title is-4">Mariann Haugland</div>
-                    <p class="subtitle is-6">
-                      <a href="https://www.linkedin.com/in/m-haugland-webdeveloper/">linkedin</a>
-                    </p>
-                    <p class="subtitle is-6">+1 403 707 7241</p>
-                    <button class="button" @click="modalToggle">Resume</button>
+                    <div>
+                      <i class="fab fa-linkedin"></i><p class="subtitle is-6" style="display:inline-block; margin-left:0.75rem;" >
+                        <a href="https://www.linkedin.com/in/m-haugland-webdeveloper/">My Linkedin</a> 
+                      </p>
+                    </div>
+                    <div>
+                      <i class="fas fa-envelope-square"></i><p class="subtitle is-6" style="display:inline-block; margin-left:0.75rem;">mariannhaugland@gmail.com</p>
+                    </div>
+                    <div>
+                      <i class="fas fa-phone-square"></i><p class="subtitle is-6" style="display:inline-block; margin-left:0.75rem;">+1 403 707 7241</p>
+                    </div>
+                    <button class="button" style="margin-top:1rem" @click="modalToggle">See my Resume</button>
                   </div>
                 </div>
               </div>
@@ -27,8 +34,22 @@
               <div class="card-content">
                 <div class="media">
                   <div class="media-content">
-                    <div class="title is-4">Mariann Haugland</div>
-                    <p class="subtitle is-6"><a href="https://www.linkedin.com/in/m-haugland-webdeveloper/">linkedin</a></p>
+                    <div class="title is-4">Contact</div>
+                    <form class="contact-form" @submit.prevent="sendEmail">
+                      <label class="label">Your name</label>
+                      <div class="control">
+                        <input class="input" type="text" name="user_name">
+                      </div>
+                      <label class="label">Your email</label>
+                      <div class="control">
+                        <input class="input" type="email" name="user_email">
+                      </div>
+                      <label class="label">Your message</label>
+                      <div class="control">
+                        <textarea name="message"></textarea>
+                        <input class="button" type="submit" value="Send">
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -48,6 +69,8 @@
 </template>
 
 <script>
+import emailjs from 'emailjs-com';
+
 export default {
   methods: {
     modalToggle: function(){
@@ -61,6 +84,15 @@ export default {
       modal.forEach(element => {
         element.classList.remove('is-active');
       });
+    },
+    sendEmail: (e) => {
+      emailjs.init("user_NN9nBpNBUHCW5dh5dryPi");
+      emailjs.sendForm('gmail', 'template_apcrZw0l', e.target, 'user_NN9nBpNBUHCW5dh5dryPi')
+        .then((result) => {
+            console.log('SUCCESS!', result.status, result.text);
+        }, (error) => {
+            console.log('FAILED...', error);
+        });
     }
   }
 }
@@ -82,5 +114,11 @@ export default {
 }
 .modal-content{
   width:800px;
+}
+@media (max-width: 750px){
+  .hero{
+    margin-left:0; 
+    margin-top:17vh;
+  }
 }
 </style>

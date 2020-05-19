@@ -8,7 +8,6 @@
 </template>
 
 <script>
-
 import TheNavigation from "@/components/TheNavigation.vue";
 
 export default{
@@ -29,6 +28,7 @@ export default{
 /* is the actual transition, and is applied throughout the entire entering or leaving phase.  */
 .fade-enter-active, .fade-leave-active{
   transition: opacity 0.5s;
+  transition-delay: 0.7s;
 }
 /* the starting stage or ending stage, before the transition starts */
 .fade-enter, .fade-leave-to{

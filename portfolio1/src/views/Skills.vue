@@ -1,7 +1,7 @@
 <template>
   <section id="skills" class="container">
-    <div class="columns is-8" style="margin-top: 10vh;">
-      <div class="column">
+    <div id="wrapper" class="columns is-8">
+      <div class="column is-half">
         <h1 class="title" >My Skills:</h1>
         <ul class="subtitle has-text-left-desktop" style="margin-top: 5vh;">
           <li>HTML5</li>
@@ -19,8 +19,8 @@
         </ul>
       </div>
       <div class="column">
-        <figure>
-          <img src="@/assets/mig.png" alt="Mariann">
+        <figure class="image is-3by4">
+          <img src="@/assets/mig1.png" alt="Mariann">
         </figure>
       </div>
     </div>
@@ -38,6 +38,9 @@ export default {
 <style scoped>
 .columns{
   margin-left:140px; /*for the nav bar*/
+}
+#wrapper{
+  margin-top:10vh;
 }
 ul{
   list-style-type:disc;
@@ -65,7 +68,16 @@ img{
 @media (max-width: 750px){
   #skills .columns{
     margin-left: 0vw; 
-    margin-top: 17vh;
+
+  }
+  #wrapper{
+    margin-top:17vh;
+  }
+  ul{
+    list-style-position: outside;
+  }
+  img{
+    padding:0;
   }
 }
 </style>

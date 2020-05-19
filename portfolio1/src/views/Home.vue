@@ -33,6 +33,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin-left: 140px;
 }
 #backgroundColor{
   background-color: #8e2727;
@@ -50,9 +51,14 @@ export default {
   left: 0;
   z-index:10;
 }
-
 .container{
   z-index: 20;
+}
+@media (max-width: 750px){
+  .hero{
+    margin-left:0; 
+    margin-top: 17vh;
+  }
 }
 .slide-enter{
   opacity:0;
@@ -64,10 +70,11 @@ export default {
 }
 .slide-enter-active{
   transition: opacity 2s, transform 2s;
-  transition-delay: 1.5s;
+  transition-delay: 2s;
 }
 .fade-enter-active{
-  transition: opacity 1s;
+  transition: opacity 1.5s;
+  transition-delay: 1.5s;
 }
 /* the starting stage or ending stage, before the transition starts */
 .fade-enter{

@@ -1,17 +1,19 @@
 <template>
-
-<section class="hero is-fullheight">
-  <transition appear appear-class="slide-enter" appear-to-class="slide-enter-to" appear-active-class="slide-enter-active">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">Mariann Haugland.</h1>
-      <h1 class="title">Full Stack Web Developer.</h1>
-    </div>
-    <div id="backgroundColor"></div>
-  </div>
+<div>
+  <transition appear appear-class="fade-enter" appear-to-class="fade-enter-to" appear-active-class="fade-enter-active">
+    <section class="hero is-fullheight">
+      <transition appear appear-class="slide-enter" appear-to-class="slide-enter-to" appear-active-class="slide-enter-active">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Mariann Haugland.</h1>
+          <h1 class="title">Full Stack Web Developer.</h1>
+        </div>
+        <div id="backgroundColor"></div>
+      </div>
+      </transition>
+    </section>
   </transition>
-</section>
-
+</div>
 </template>
 
 <script>
@@ -27,7 +29,7 @@ export default {
 </script>
 <style scoped>
 .hero{
-  background-image: url("../assets/background-resized.png");
+  background-image: url("../assets/background-resized-min.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -62,6 +64,16 @@ export default {
 }
 .slide-enter-active{
   transition: opacity 2s, transform 2s;
-  transition-delay: 2s;
+  transition-delay: 1.5s;
+}
+.fade-enter-active{
+  transition: opacity 1s;
+}
+/* the starting stage or ending stage, before the transition starts */
+.fade-enter{
+  opacity:0; 
+}
+.fade-enter-to{
+  opacity:1;
 }
 </style>

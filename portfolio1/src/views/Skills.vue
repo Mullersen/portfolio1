@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 .columns{
-  margin-left:10vw; /*for the nav bar*/
+  margin-left:140px; /*for the nav bar*/
 }
 ul{
   list-style-type:disc;

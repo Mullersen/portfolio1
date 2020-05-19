@@ -1,6 +1,6 @@
 <template>
   <div class="navigation">
-    <router-link id="home" :to="{name: 'Home'}">Home</router-link>
+    <router-link id="home" :to="{name: 'Home'}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="height: 69px; width: 69px;"><defs><filter id="shadow-4" height="300%" width="300%" x="-100%" y="-100%"><feFlood flood-color="rgba(255, 255, 255, 1)" result="flood"></feFlood><feComposite in="flood" in2="SourceGraphic" operator="atop" result="composite"></feComposite><feGaussianBlur in="composite" stdDeviation="15" result="blur"></feGaussianBlur><feOffset dx="0" dy="0" result="offset"></feOffset><feComposite in="SourceGraphic" in2="offset" operator="over"></feComposite></filter></defs><circle cx="256" cy="256" r="256" fill="#f5e9e2" fill-opacity="1"></circle><g class="" transform="translate(0,-55)" style="touch-action: none;"><g transform="translate(51.2, 51.2) scale(0.8, 0.8) rotate(0, 256, 256)"><path d="M256 19.27L25.637 249.638L19.27 256L32 268.73L38.363 262.363L256 44.727L473.637 262.363L480 268.73L492.73 256L486.363 249.637Z" class="" fill="#f5e9e2" fill-opacity="1"></path><path d="M96 48L96 155.273L160 91.271L160 48Z" class="" fill="#f5e9e2" fill-opacity="1"></path><path d="M256 68.727L64 260.727L64 486L128 486L128 320L224 320L224 486L448 486L448 260.727Z" class="selected" fill="#000000" fill-opacity="1" filter="url(#shadow-4)"></path><path d="M288 320L384 320L384 400L288 400Z" class="" fill="#f5e9e2" fill-opacity="1"></path></g></g></svg></router-link>
     <div class="links">
       <router-link :to="{name: 'Skills'}">Skills</router-link>
       <router-link :to="{name: 'Work'}">Work</router-link>
@@ -19,7 +19,7 @@ export default {
 .navigation{
     position: fixed;
     height:100%;
-    width: 10vw;
+    width: 140px;
     z-index:100; 
     background-color: black; 
     top:0; 
@@ -35,6 +35,7 @@ export default {
 }
 #home{
   position:absolute;
+
 }
 .navigation a {
   font-weight: bold;

@@ -145,7 +145,7 @@ svg {
   background-color: #b8e0d2;
 }
 #columnWrapper {
-  margin-left: 10vw;
+  margin-left: 140px;
 }
 @media (max-width: 750px) {
   #columnWrapper {

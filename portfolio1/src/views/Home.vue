@@ -7,6 +7,7 @@
         <div class="container">
           <h1 class="title">Mariann Haugland.</h1>
           <h1 class="title">Full Stack Web Developer.</h1>
+          <h2 class="subtitle">Seeking to make an impact with my combined skillset in web technologies, e-marketing and communications</h2>
         </div>
         <div id="backgroundColor"></div>
       </div>
@@ -28,6 +29,10 @@ export default {
 }
 </script>
 <style scoped>
+.subtitle{
+  margin-top: 2rem !important; 
+
+}
 .hero{
   background-image: url("../assets/background-resized-min.png");
   background-repeat: no-repeat;
@@ -70,11 +75,11 @@ export default {
 }
 .slide-enter-active{
   transition: opacity 2s, transform 2s;
-  transition-delay: 2s;
+  transition-delay: 1.7s;
 }
 .fade-enter-active{
   transition: opacity 1.5s;
-  transition-delay: 1.5s;
+  transition-delay: 1.3s;
 }
 /* the starting stage or ending stage, before the transition starts */
 .fade-enter{

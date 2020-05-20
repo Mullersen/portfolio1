@@ -23,7 +23,9 @@
           </div>
           <div class="column is-4">
             <figure class="image is-3by4">
-              <img src="@/assets/mig1.png" alt="Mariann" />
+              <img
+                src="@/assets/mig1.png"
+              />
             </figure>
           </div>
           <div class="column is-1"></div>
@@ -35,16 +37,12 @@
 </template>
 
 <script>
-export default {};
 </script>
 
 <style scoped>
 .columns {
   margin-left: 140px; /*for the nav bar*/
 }
-/* #wrapper{
-  margin-top:10vh;
-} */
 ul {
   list-style-type: disc;
   list-style-position: inside;

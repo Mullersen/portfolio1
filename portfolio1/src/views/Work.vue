@@ -1,9 +1,9 @@
 <template>
   <section class="hero is-fullheight">
-    <div class="hero-body">
+    <div class="hero-body has-text-centered">
         <div class="columns is-gapless is-multiline">
           <div class="column is-half">
-            <div class="card">
+            <div id="card1" class="card">
               <div class="card-content">
                 <h2 class="title">Tweeter Project</h2>
                 <svg id="animateSvg1" height="150" width="150">
@@ -54,7 +54,7 @@
             </div>
           </div>
           <div class="column is-half">
-            <div class="card">
+            <div id="card2" class="card">
               <div class="card-content">
                 <h2 class="title">Okotoks Pizza</h2>
                 <svg id="animateSvg2" height="150" width="150">
@@ -105,7 +105,7 @@
             </div>
           </div>
           <div class="column is-half">
-            <div class="card">
+            <div id="card3" class="card">
               <div class="card-content">
                 <h2 class="title">MVP Inside Canada</h2>
                 <svg id="animateSvg3" height="150" width="150">
@@ -156,7 +156,7 @@
             </div>
           </div>
           <div class="column is-half">
-            <div class="card">
+            <div id="card4" class="card">
               <div class="card-content">
                 <h2 class="title">More to come...</h2>
                 <svg id="animateSvg4" height="150" width="150">
@@ -187,7 +187,7 @@
                     text-anchor="middle"
                     stroke="#f5e9e2"
                     stroke-width="0.5px"
-                    fill="#6E7E86"
+                    fill="#5B6B75"
                     dy=".4em"
                   >More</text>
                 </svg>
@@ -210,7 +210,7 @@
           <button class="button">
             <a href="https://github.com/Mullersen/TweeterTwo" target="_blank">GitHub Repo</a>
           </button>
-          <button class="button">Website</button>
+          <button class="button"><a href="https://tweeterproject.tk" target="_blank">Website</a></button>
         </footer>
       </div>
     </div>
@@ -226,9 +226,9 @@
         </section>
         <footer class="modal-card-foot">
           <button class="button">
-            <a href>GitHub Repo</a>
+            <a href="https://github.com/Mullersen/Okotoks-Pizza.git" target="_blank">GitHub Repo</a>
           </button>
-          <button class="button">Website</button>
+          <button class="button"><a href="https://okotokspizzaproject.ml" target="_blank">Website</a></button>
         </footer>
       </div>
     </div>
@@ -246,7 +246,7 @@
           <button class="button">
             <a href="https://github.com/Mullersen/MVP" target="_blank">GitHub Repo</a>
           </button>
-          <button class="button">Website</button>
+          <button class="button"><a href="https://insidecanada.ml" target="_blank">Website</a></button>
         </footer>
       </div>
     </div>
@@ -285,15 +285,30 @@ export default {
 
 <style scoped>
 .hero-body{
-  /* padding: 0 !important; */
+  justify-content: center;
   margin-left: 140px;
   background-color: #b8e0d2;
 }
-.title {
-  color: #364652;
+#card1{
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,.5)), url("../assets/tweeter.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-.card {
-  background-image: url("../assets/routeMap.png");
+#card2{
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,.5)), url("../assets/pizza.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#card3{
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,.5)), url("../assets/insidecanada.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#card4{
+  background-color: #5B6B75;
 }
 svg {
   margin-bottom: 24px;

@@ -17,19 +17,19 @@ const routes = [{
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-            import ( /* webpackChunkName: "about" */ '../views/Skills.vue')
+            import ( /* webpackChunkName: "skills" */ '../views/Skills.vue')
     },
     {
         path: '/work', // the path of the route
         name: 'Work', //the name of the component to easily refer to this route
         component: () =>
-            import ( /* webpackChunkName: "projects" */ '../views/Work.vue'), //this is the view-component you want to render when this internal link is clicked. 
+            import ( /* webpackChunkName: "work" */ '../views/Work.vue'), //this is the view-component you want to render when this internal link is clicked. 
     },
     {
         path: '/contact',
         name: 'Contact',
         component: () =>
-            import ( /* webpackChunkName: "projects" */ '../views/Contact.vue')
+            import ( /* webpackChunkName: "contact" */ '../views/Contact.vue')
     }
 ]
 

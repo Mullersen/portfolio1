@@ -34,11 +34,12 @@
               <div class="card-content">
                 <div class="media">
                   <div class="media-content">
-                    <div class="title is-4">Contact</div>
+                    <p class="title is-4">Help me build my portfolio</p>
+                    <p class="subtitle">Do you have a project for me? Let me know, and I will get back to you!</p>
                     <form class="contact-form" @submit.prevent="sendEmail">
                       <label class="label">Your name</label>
                       <div class="control">
-                        <input class="input" type="text" name="user_name">
+                        <input class="input" type="text" name="from_name">
                       </div>
                       <label class="label">Your email</label>
                       <div class="control">
@@ -46,7 +47,7 @@
                       </div>
                       <label class="label">Your message</label>
                       <div class="control">
-                        <textarea name="message"></textarea>
+                        <textarea class="input" name="message_html"></textarea>
                         <input class="button" type="submit" value="Send">
                       </div>
                     </form>
@@ -90,10 +91,15 @@ export default {
       emailjs.sendForm('gmail', 'template_apcrZw0l', e.target, 'user_NN9nBpNBUHCW5dh5dryPi')
         .then((result) => {
             console.log('SUCCESS!', result.status, result.text);
+            var input = document.getElementsByClassName('input');
+            input.forEach(element => {
+              element.value = "";
+            });
         }, (error) => {
             console.log('FAILED...', error);
         });
     }
+    
   }
 }
 </script>

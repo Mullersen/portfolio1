@@ -64,6 +64,9 @@ export default {
     margin-left:0; 
     margin-top: 17vh;
   }
+  .hero.is-fullheight{
+    min-height:83vh !important;
+  }
 }
 .slide-enter{
   opacity:0;

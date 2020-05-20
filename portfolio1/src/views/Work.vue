@@ -1,7 +1,7 @@
 <template>
   <section class="hero is-fullheight">
     <div class="hero-body has-text-centered">
-        <div class="columns is-gapless is-multiline">
+        <div class="columns is-multiline">
           <div class="column is-half">
             <div id="card1" class="card">
               <div class="card-content">
@@ -288,6 +288,7 @@ export default {
   justify-content: center;
   margin-left: 140px;
   background-color: #b8e0d2;
+  padding: 3rem 2rem !important;
 }
 #card1{
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,.5)), url("../assets/tweeter.png");

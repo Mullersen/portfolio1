@@ -79,8 +79,7 @@
       <div class="modal-content">
         <iframe
           src="https://docs.google.com/document/d/e/2PACX-1vQOBfyrYl6NRK4iIalGgKVJG3Hlh-dr1TujDhYEdROrRpUSNojl4dIAAIudjDVu_9ftoP9_J1w4dmaC/pub?embedded=true"
-          height="700px"
-          width="800px"
+          
         ></iframe>
       </div>
       <button @click="modalClose" class="modal-close is-large" aria-label="close"></button>
@@ -155,6 +154,10 @@ export default {
 </script>
 
 <style scoped>
+iframe{
+  height:700px;
+  width:800px;
+}
 .hero {
   background-image: url("../assets/pen.png");
   background-repeat: no-repeat;
@@ -175,6 +178,10 @@ export default {
   .hero {
     margin-left: 0;
     margin-top: 17vh;
+  }
+  iframe{
+    height: 90vh;
+    width:100vw;
   }
 }
 </style>

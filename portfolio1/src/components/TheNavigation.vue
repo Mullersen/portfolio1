@@ -111,7 +111,9 @@ export default {
   justify-content: center;
 }
 #home {
-  position: absolute;
+  position:absolute;
+  padding: 4vh 0 0 0;
+  left:105px;
 }
 .navigation a {
   font-weight: bold;
@@ -141,7 +143,7 @@ a:hover {
     padding: 0;
   }
   .navigation a {
-    padding: 0 !important;
+    padding: .25rem !important;
   }
   #home {
     left: 10px;

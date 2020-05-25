@@ -1,32 +1,11 @@
 <template>
   <section class="hero is-fullheight">
-    <div class="hero-body has-text-centered">
-        <div class="columns is-multiline">
-          <div class="column is-half">
+    <div class="hero-body">
+        <div class="columns is-multiline is-gapless">
+          <div class="column is-6">
             <div id="card1" class="card">
               <div class="card-content">
-                <h2 class="title">Tweeter Project</h2>
                 <svg id="animateSvg1" height="150" width="150">
-                  <defs>
-                    <filter
-                      id="dropshadow"
-                      x="-40%"
-                      y="-40%"
-                      width="180%"
-                      height="180%"
-                      filterUnits="userSpaceOnUse"
-                    >
-                      <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
-                      <!-- stdDeviation is how much to blur -->
-                      <feOffset dx="5" dy="5" result="offsetblur" />
-                      <feOffset dx="-5" dy="-5" result="offsetblur" />
-                      <feMerge>
-                        <feMergeNode />
-                        <feMergeNode in="SourceGraphic" />
-                        <feMergeNode in="SourceGraphic" />
-                      </feMerge>
-                    </filter>
-                  </defs>
                   <circle
                     @mouseenter="hoverOver(1)"
                     @mouseout="hoverOut(1)"
@@ -35,7 +14,6 @@
                     cy="75"
                     r="55"
                     fill="#364652"
-                    style="filter:url(#dropshadow)"
                   />
                   <text
                     @mouseenter="hoverOver(1)"
@@ -50,34 +28,14 @@
                     dy=".4em"
                   >More</text>
                 </svg>
+                <h2 class="title is-4 has-text-left">Tweeter Project</h2>
               </div>
             </div>
           </div>
-          <div class="column is-half">
+          <div class="column is-6">
             <div id="card2" class="card">
               <div class="card-content">
-                <h2 class="title">Okotoks Pizza</h2>
                 <svg id="animateSvg2" height="150" width="150">
-                  <defs>
-                    <filter
-                      id="dropshadow"
-                      x="-40%"
-                      y="-40%"
-                      width="180%"
-                      height="180%"
-                      filterUnits="userSpaceOnUse"
-                    >
-                      <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
-                      <!-- stdDeviation is how much to blur -->
-                      <feOffset dx="5" dy="5" result="offsetblur" />
-                      <feOffset dx="-5" dy="-5" result="offsetblur" />
-                      <feMerge>
-                        <feMergeNode />
-                        <feMergeNode in="SourceGraphic" />
-                        <feMergeNode in="SourceGraphic" />
-                      </feMerge>
-                    </filter>
-                  </defs>
                   <circle
                     @mouseenter="hoverOver(2)"
                     @mouseout="hoverOut(2)"
@@ -86,7 +44,6 @@
                     cy="75"
                     r="55"
                     fill="#364652"
-                    style="filter:url(#dropshadow)"
                   />
                   <text
                     @mouseenter="hoverOver(2)"
@@ -101,34 +58,14 @@
                     dy=".4em"
                   >More</text>
                 </svg>
+                <h2 class="title is-4 has-text-left">Okotoks Pizza</h2>
               </div>
             </div>
           </div>
-          <div class="column is-half">
+          <div class="column is-6">
             <div id="card3" class="card">
               <div class="card-content">
-                <h2 class="title">MVP Inside Canada</h2>
                 <svg id="animateSvg3" height="150" width="150">
-                  <defs>
-                    <filter
-                      id="dropshadow"
-                      x="-40%"
-                      y="-40%"
-                      width="180%"
-                      height="180%"
-                      filterUnits="userSpaceOnUse"
-                    >
-                      <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
-                      <!-- stdDeviation is how much to blur -->
-                      <feOffset dx="5" dy="5" result="offsetblur" />
-                      <feOffset dx="-5" dy="-5" result="offsetblur" />
-                      <feMerge>
-                        <feMergeNode />
-                        <feMergeNode in="SourceGraphic" />
-                        <feMergeNode in="SourceGraphic" />
-                      </feMerge>
-                    </filter>
-                  </defs>
                   <circle
                     @mouseenter="hoverOver(3)"
                     @mouseout="hoverOut(3)"
@@ -137,7 +74,6 @@
                     cy="75"
                     r="55"
                     fill="#364652"
-                    style="filter:url(#dropshadow)"
                   />
                   <text
                     @mouseenter="hoverOver(3)"
@@ -152,35 +88,15 @@
                     dy=".4em"
                   >More</text>
                 </svg>
+                <h2 class="title is-4 has-text-left">MVP Inside Canada</h2>
               </div>
             </div>
           </div>
-          <div class="column is-half">
+          <div class="column is-6">
             <div id="card4" class="card">
               <div class="card-content">
-                <h2 class="title">More to come...</h2>
                 <svg id="animateSvg4" height="150" width="150">
-                  <defs>
-                    <filter
-                      id="dropshadow"
-                      x="-40%"
-                      y="-40%"
-                      width="180%"
-                      height="180%"
-                      filterUnits="userSpaceOnUse"
-                    >
-                      <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
-                      <!-- stdDeviation is how much to blur -->
-                      <feOffset dx="5" dy="5" result="offsetblur" />
-                      <feOffset dx="-5" dy="-5" result="offsetblur" />
-                      <feMerge>
-                        <feMergeNode />
-                        <feMergeNode in="SourceGraphic" />
-                        <feMergeNode in="SourceGraphic" />
-                      </feMerge>
-                    </filter>
-                  </defs>
-                  <circle cx="75" cy="75" r="55" fill="#364652" style="filter:url(#dropshadow)" />
+                  <circle cx="75" cy="75" r="55" fill="#364652" />
                   <text
                     x="50%"
                     y="50%"
@@ -191,6 +107,7 @@
                     dy=".4em"
                   >More</text>
                 </svg>
+                <h2 class="title is-4 has-text-left">More to come...</h2>
               </div>
             </div>
           </div>
@@ -284,35 +201,45 @@ export default {
 </script>
 
 <style scoped>
+.title{
+  text-decoration: none;
+}
 .hero-body{
   justify-content: center;
   margin-left: 140px;
   background-color: #b8e0d2;
-  padding: 3rem 2rem !important;
+  padding: 3rem 0rem !important;
 }
 #card1{
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,.5)), url("../assets/tweeter.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-width: 0.5px 0px 0px 0.5px;
 }
 #card2{
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,.5)), url("../assets/pizza.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-width: 0.5px 0.5px 0px 0px;
 }
 #card3{
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,.5)), url("../assets/insidecanada.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-width: 0px 0px 0.5px 0.5px;
 }
 #card4{
   background-color: #5B6B75;
+  border-width: 0px 0.5px 0.5px 0px;
+}
+.card{
+  border: #2A2A2A solid;
 }
 svg {
-  margin-bottom: 24px;
+  margin: 50px 0 25px 0;
 }
 #columnWrapper {
   margin-left: 140px;
@@ -320,6 +247,9 @@ svg {
 @media (max-width: 750px) {
   .hero-body {
     margin: 17vh 0 0 0;
+  }
+  #card1 #card2 #card3 #card4{
+    border:none;
   }
 }
 </style>

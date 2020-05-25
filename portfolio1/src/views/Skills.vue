@@ -11,7 +11,7 @@
               <li>CSS3 + Sass</li>
               <li>JavaScript</li>
               <li>PHP</li>
-              <li>MySQL</li>
+              <li>MySQL And Apache</li>
               <li>APIs</li>
               <li>Git/Github</li>
               <li>Laravel</li>

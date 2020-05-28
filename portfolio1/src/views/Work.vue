@@ -25,7 +25,7 @@
                     stroke-width="0.5px"
                     fill="#f5e9e2"
                     dy=".4em"
-                  >More</text>
+                  >Details</text>
                   </router-link>
                 </svg>
                 <h2 class="title is-4 has-text-left">{{project.name}}</h2>

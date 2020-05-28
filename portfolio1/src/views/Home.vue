@@ -30,6 +30,7 @@
                 />
                 <a
                   id="upworkLink"
+                  target="_blank"
                   href="https://www.upwork.com/o/profiles/users/~013bf0fd12854a1b5a/"
                 >Connect with me on Upwork!</a>
               </div>

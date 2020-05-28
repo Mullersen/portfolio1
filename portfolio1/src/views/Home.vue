@@ -22,10 +22,17 @@
               >Seeking to make an impact with my combined skillset in web technologies, e-marketing and communications</h2>
             </div>
             <div id="backgroundColor"></div>
-            <div id="message">
-              <img style="max-height:7vh; opacity: 0.8;" src="../assets/geoshape.png" alt="geometric shape" />
-              <a id="upworkLink" href="https://www.upwork.com/o/profiles/users/~013bf0fd12854a1b5a/">Connect with me on Upwork!</a>
-            </div>
+              <div id="message">
+                <img
+                  style="max-height:7vh; opacity: 0.8;"
+                  src="../assets/geoshape.png"
+                  alt="geometric shape"
+                />
+                <a
+                  id="upworkLink"
+                  href="https://www.upwork.com/o/profiles/users/~013bf0fd12854a1b5a/"
+                >Connect with me on Upwork!</a>
+              </div>
           </div>
         </transition>
       </section>
@@ -35,23 +42,31 @@
 
 <script>
 // @ is an alias to /src
+import anime from "../../node_modules/animejs/lib/anime.es.js";
 
 export default {
   name: "Home",
-  components: {}
+  mounted(){
+    anime({
+        targets: "#message",
+        delay:5000,
+        opacity:1,
+      });
+  }
 };
 </script>
 <style scoped>
-#upworkLink{
-  position:absolute;
+#upworkLink {
+  position: absolute;
   width: 10vw;
-  color:black;
+  color: black;
 }
 #message {
   position: absolute;
-  top: 90vh;
-  left: 80vw;
+  top: 89vh;
+  left: 78vw;
   z-index: 1000;
+  opacity:0;
 }
 .subtitle {
   margin-top: 2rem !important;
@@ -89,6 +104,14 @@ export default {
   }
   .hero.is-fullheight {
     min-height: 83vh !important;
+  }
+  #upworkLink {
+    position: static;
+    color: black;
+  }
+  #message {
+    left: auto;
+    z-index: 1000;
   }
 }
 .slide-enter {

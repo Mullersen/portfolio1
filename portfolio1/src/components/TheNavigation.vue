@@ -1,9 +1,10 @@
 <template>
   <div class="navigation">
-    <router-link id="home" :to="{name: 'Home'}">
+    <router-link id="home" :to="{name: 'Home'}" @click="noSubMenu"> 
       <svg
         @mouseenter="hoverOver()"
         @mouseout="hoverOut()"
+        @click="noSubMenu"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
         style="height: 69px; width: 69px;"
@@ -66,16 +67,29 @@
       </svg>
     </router-link>
     <div class="links">
-      <router-link :to="{name: 'Skills'}">Skills</router-link>
-      <router-link :to="{name: 'Work'}">Work</router-link>
-      <router-link :to="{name: 'Contact'}">Contact</router-link>
+      <router-link :to="{name: 'Skills'}" @click.native="noSubMenu">Skills</router-link>
+      <router-link id="workLink" :to="{name: 'Work'}" @click.native="subMenu">Work</router-link>
+      <div id="subLinks">
+        <div v-for="project in projects" :key="project.name">
+          <router-link :to="{name: 'Project', params:{slug: project.slug}}">{{project.name}}</router-link>
+        </div>
+      </div>
+      <router-link :to="{name: 'Contact'}" @click.native="noSubMenu">Contact</router-link>
     </div>
   </div>
 </template>
 
 <script>
 import anime from "../../node_modules/animejs/lib/anime.es.js";
+import work from "@/work.js";
+
 export default {
+  data: function(){
+    return{
+      projects: work.projects,
+
+    }
+  },
   methods: {
     hoverOver: function() {
       anime({
@@ -88,8 +102,36 @@ export default {
         targets: "#home",
         scale: 1
       });
+    }, 
+    subMenu: function(){
+      console.log("submenu");
+      anime({
+        targets:"#subLinks",
+        height: [
+				{value: 0, duration: 1},
+				{value: 170 + 'px'}
+			],
+			width: [
+				{value: 0, duration: 1},
+				{value: 80 + 'px'}
+			]
+      })
+    },
+    noSubMenu: function(){
+      var height = document.getElementById('subLinks').offsetHeight;
+      console.log(height);
+      if(height == 170){
+        anime({
+          targets:"#subLinks",
+          height: [
+            {value: 170 + 'px'},
+            {value: 0}
+          ]
+        })
+      }
+      
     }
-  }
+  }, 
 };
 </script>
 
@@ -110,6 +152,23 @@ export default {
   align-items: center;
   justify-content: center;
 }
+.navigation #subLinks a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  padding: 1vh 0.5vw 1vh 0.5vw;
+  margin: 1vh 0 1vh 0;
+  font-size: 0.95rem;
+  color: #2c3e50;
+}
+.navigation #subLinks{
+  margin-top: -3.9vh;
+  margin-bottom: 3.9vh;
+  height: 0;
+  overflow: hidden;
+}
 #home {
   position:absolute;
   padding: 4vh 0 0 0;
@@ -119,17 +178,19 @@ export default {
   font-weight: bold;
   color: #f5e9e2;
   padding: 4vh;
+  font-size: 1.2rem;
 }
 .navigation a.router-link-exact-active {
   color: #2c3e50;
 }
+
 a:hover {
   color: #2c3e50;
 }
 @media (max-width: 750px) {
   .navigation {
     position: fixed;
-    height: 17vh;
+    height: 18vh;
     width: 100%;
     z-index: 100;
     background-color: black;
@@ -147,6 +208,9 @@ a:hover {
   }
   #home {
     left: 10px;
+  }
+  #subLinks{
+    display:none;
   }
 }
 </style>

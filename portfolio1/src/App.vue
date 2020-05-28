@@ -2,7 +2,7 @@
   <div id="app">
       <TheNavigation/>
       <transition name="fade" mode="out-in">
-        <router-view/>
+        <router-view :key="$route.path"/> // key forces a reload everytime the path of the route changes
       </transition>
   </div>
 </template>

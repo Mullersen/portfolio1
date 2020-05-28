@@ -74,7 +74,7 @@ img {
     margin-top: 17vh;
   }
   ul {
-    list-style-position: outside;
+    list-style-type: none;
   }
   img {
     padding: 0;

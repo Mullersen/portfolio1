@@ -13,7 +13,7 @@
                     <div>
                       <i class="fab fa-linkedin"></i>
                       <p class="subtitle is-6" style="display:inline-block; margin-left:0.75rem;">
-                        <a href="https://www.linkedin.com/in/m-haugland-webdeveloper/">My Linkedin</a>
+                        <a target="_blank" href="https://www.linkedin.com/in/m-haugland-webdeveloper/">My Linkedin</a>
                       </p>
                     </div>
                     <div>

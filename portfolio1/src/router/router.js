@@ -23,14 +23,22 @@ const routes = [{
         path: '/work', // the path of the route
         name: 'Work', //the name of the component to easily refer to this route
         component: () =>
-            import ( /* webpackChunkName: "work" */ '../views/Work.vue'), //this is the view-component you want to render when this internal link is clicked. 
+            import ( /* webpackChunkName: "work" */ '../views/Work.vue'), //this is the view-component you want to render when this internal link is clicked. ´
     },
     {
         path: '/contact',
         name: 'Contact',
         component: () =>
             import ( /* webpackChunkName: "contact" */ '../views/Contact.vue')
-    }
+    },
+    {
+        path: '/project/:slug',
+        name: 'Project',
+        props: true,
+        component: () =>
+            import ( /* webpackChunkName: "Project" */ '../views/Project.vue')
+    },
+
 ]
 
 const router = new VueRouter({

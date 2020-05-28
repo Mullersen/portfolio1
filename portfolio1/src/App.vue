@@ -12,7 +12,7 @@ import TheNavigation from "@/components/TheNavigation.vue";
 
 export default{
   components:{
-    TheNavigation
+    TheNavigation,
   }
 }
 </script>

@@ -157,7 +157,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-weight: normal;
   padding: 1vh 0.5vw 1vh 0.5vw;
   margin: 1vh 0 1vh 0;
   font-size: 0.95rem;

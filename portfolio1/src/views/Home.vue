@@ -15,10 +15,10 @@
         >
           <div class="hero-body">
             <div class="container">
-              <h1 class="title">Mariann Haugland.</h1>
-              <h1 class="title">Full Stack Web Developer.</h1>
+              <h1 class="title">Mariann Haugland</h1>
+              <h1 class="title">Full Stack Web Developer</h1>
               <h2
-                class="subtitle"
+                class="content"
               >Seeking to make an impact with my combined skillset in web technologies, e-marketing and communications</h2>
             </div>
             <div id="backgroundColor"></div>
@@ -29,6 +29,7 @@
                   alt="geometric shape"
                 />
                 <a
+                  class="content"
                   id="upworkLink"
                   target="_blank"
                   href="https://www.upwork.com/o/profiles/users/~013bf0fd12854a1b5a/"
@@ -97,6 +98,9 @@ export default {
 }
 .container {
   z-index: 20;
+}
+.content{
+  color:#f5e9e2;
 }
 @media (max-width: 750px) {
   .hero {

@@ -20,6 +20,7 @@ export default{
 <style>
 #app {
   font-family: 'Courier Prime', monospace;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -39,10 +40,24 @@ export default{
 }
 .title{
   color:#f5e9e2;
-  text-decoration:underline;
+  /* text-decoration:underline; */
   z-index: 100;
 }
 .subtitle{
   color:#f5e9e2;
+}
+.button{
+  background-color: #f5e9e2 !important;
+  border: none;
+  border-radius: 0;
+  font-family: 'DM Sans', sans-serif;
+
+}
+.button a{
+  color: black !important;
+  font-family: 'DM Sans', sans-serif;
+}
+.content{
+font-family: 'DM Sans', sans-serif;
 }
 </style>

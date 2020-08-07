@@ -16,38 +16,18 @@
                     fill="#364652"
                   />
                   <text
+                  class="content"
                     @mouseenter="hoverOver(index)"
                     @mouseout="hoverOut(index)"
                     x="50%"
                     y="50%"
-                    text-anchor="middle"
-                    stroke="#f5e9e2"
-                    stroke-width="0.5px"
+                    text-anchor="middle"          
                     fill="#f5e9e2"
                     dy=".4em"
                   >Details</text>
                   </router-link>
                 </svg>
-                <h2 class="title is-4 has-text-left">{{project.name}}</h2>
-              </div>
-            </div>
-          </div>
-          <div class="column is-6">
-            <div id="card4" class="card">
-              <div class="card-content">
-                <svg id="animateSvg4" height="150" width="150">
-                  <circle cx="75" cy="75" r="55" fill="#364652" />
-                  <text
-                    x="50%"
-                    y="50%"
-                    text-anchor="middle"
-                    stroke="#f5e9e2"
-                    stroke-width="0.5px"
-                    fill="#5B6B75"
-                    dy=".4em"
-                  >More</text>
-                </svg>
-                <h2 class="title is-4 has-text-left">More to come...</h2>
+                <h2 class="title is-4 has-text-left has-text-centered-mobile">{{project.name}}</h2>
               </div>
             </div>
           </div>
@@ -95,29 +75,31 @@ export default {
 
 }
 #card1{
- background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,.8)), url("../assets/tweeter.png");
+ background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,.75)), url("../assets/essou1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-width: 0.5px 0.5px 0.5px 0.5px;
 }
 #card2{
- background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,.8)), url("../assets/insidecanada.png");
+ background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,.75)), url("../assets/tweeter.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-width: 0.5px 0.5px 0.5px 0px;
 }
 #card3{
- background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,.8)), url("../assets/pizza.png");
+ background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,.75)), url("../assets/insidecanada.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-width: 0px 0.5px 0.5px 0.5px;
 }
 #card4{
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,.8));
-  background-color: #5B6B75;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,.75)), url("../assets/pizza.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-width: 0px 0.5px 0.5px 0px;
 }
 .card{

@@ -1,33 +1,36 @@
 <template>
   <section id="skills" class="hero is-fullheight">
+
     <div class="hero-body">
       <div class="container">
         <div class="columns is-8">
           <div class="column is-1"></div>
-          <div class="column is-6">
-            <h1 class="title">My Skills:</h1>
-            <ul class="subtitle has-text-left-desktop is-3" style="margin-top: 5vh;">
-              <li>HTML5</li>
-              <li>CSS3 + Sass</li>
-              <li>JavaScript</li>
-              <li>PHP</li>
-              <li>MySQL And Apache</li>
-              <li>APIs</li>
-              <li>Git/Github</li>
-              <li>Laravel</li>
-              <li>Vue.js</li>
-              <li>Bootstrap</li>
-              <li>Bulma</li>
-              <li>NPM</li>
-            </ul>
-          </div>
-          <div class="column is-4">
+           <div class="column is-5 is-vcentered">
             <figure class="image is-3by4">
               <img
                 src="@/assets/mig1.png"
               />
             </figure>
           </div>
+          <div class="column is-5 is-vcentered">
+            <ul class="subtitle has-text-left-desktop is-3">
+              <li>HTML5</li>
+              <li>CSS3 + Sass</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>Apache</li>
+              <li>APIs</li>
+              <li>Git/Github</li>
+              <li>Laravel</li>
+              <li>Vue.js</li>
+              <li>React</li>
+              <li>Bootstrap</li>
+              <li>Bulma</li>
+              <li>NPM</li>
+            </ul>
+          </div>
+         
           <div class="column is-1"></div>
         </div>
       </div>
@@ -42,6 +45,10 @@
 <style scoped>
 .columns {
   margin-left: 140px; /*for the nav bar*/
+}
+.column.is-vcentered {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 ul {
   list-style-type: disc;

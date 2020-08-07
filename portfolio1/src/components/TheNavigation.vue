@@ -109,7 +109,7 @@ export default {
         targets:"#subLinks",
         height: [
 				{value: 0, duration: 1},
-				{value: 170 + 'px'}
+				{value: 210 + 'px'}
 			],
 			width: [
 				{value: 0, duration: 1},
@@ -120,11 +120,11 @@ export default {
     noSubMenu: function(){
       var height = document.getElementById('subLinks').offsetHeight;
       console.log(height);
-      if(height == 170){
+      if(height == 210){
         anime({
           targets:"#subLinks",
           height: [
-            {value: 170 + 'px'},
+            {value: 210 + 'px'},
             {value: 0}
           ]
         })

@@ -12,21 +12,24 @@
                     <div class="title is-4">Mariann Haugland</div>
                     <div>
                       <i class="fab fa-linkedin"></i>
-                      <p class="subtitle is-6" style="display:inline-block; margin-left:0.75rem;">
-                        <a target="_blank" href="https://www.linkedin.com/in/m-haugland-webdeveloper/">My Linkedin</a>
+                      <p class="content is-6" style="display:inline-block; margin-left:0.75rem;">
+                        <a
+                          target="_blank"
+                          href="https://www.linkedin.com/in/m-haugland-webdeveloper/"
+                        >My Linkedin</a>
                       </p>
                     </div>
                     <div>
                       <i class="fas fa-envelope-square"></i>
                       <p
-                        class="subtitle is-6"
+                        class="content is-6"
                         style="display:inline-block; margin-left:0.75rem;"
                       >mariannhaugland@gmail.com</p>
                     </div>
                     <div>
                       <i class="fas fa-phone-square"></i>
                       <p
-                        class="subtitle is-6"
+                        class="content is-6"
                         style="display:inline-block; margin-left:0.75rem;"
                       >+1 403 707 7241</p>
                     </div>
@@ -47,22 +50,27 @@
               <div class="card-content">
                 <div class="media">
                   <div class="media-content">
-                    <p class="title is-4">Help me build my portfolio</p>
-                    <p
-                      class="subtitle"
-                    >Do you have a project for me? Let me know, and I will get back to you!</p>
+                    <p class="title is-4">Got a project for me?</p>
                     <form class="contact-form" @submit.prevent="sendEmail">
-                      <label class="label">Your name</label>
-                      <div class="control">
-                        <input class="input" type="text" name="from_name" />
+                      <div class="field">
+                        <label class="label content">Your name</label>
+                        <div class="control">
+                          <input class="input" type="text" name="from_name" />
+                        </div>
                       </div>
-                      <label class="label">Your email</label>
-                      <div class="control">
-                        <input class="input" type="email" name="user_email" />
+                      <div class="field">
+                        <label class="label content">Your email</label>
+                        <div class="control">
+                          <input class="input" type="email" name="user_email" />
+                        </div>
                       </div>
-                      <label class="label">Your message</label>
-                      <div class="control">
-                        <textarea class="input" name="message_html"></textarea>
+                      <div class="field">
+                        <label class="label content">Your message</label>
+                        <div class="control">
+                          <textarea class="input" name="message_html"></textarea>
+                        </div>
+                      </div>
+                      <div class="field">
                         <input class="button" type="submit" value="Send" />
                       </div>
                     </form>
@@ -79,7 +87,6 @@
       <div class="modal-content">
         <iframe
           src="https://docs.google.com/document/d/e/2PACX-1vQOBfyrYl6NRK4iIalGgKVJG3Hlh-dr1TujDhYEdROrRpUSNojl4dIAAIudjDVu_9ftoP9_J1w4dmaC/pub?embedded=true"
-          
         ></iframe>
       </div>
       <button @click="modalClose" class="modal-close is-large" aria-label="close"></button>
@@ -100,25 +107,25 @@
 import emailjs from "emailjs-com";
 
 export default {
-  data: function() {
+  data: function () {
     return {
-      togglestate: false
+      togglestate: false,
     };
   },
   methods: {
-    modalToggle: function() {
+    modalToggle: function () {
       var modal = document.getElementsByClassName("modal1");
-      modal.forEach(element => {
+      modal.forEach((element) => {
         element.classList.add("is-active");
       });
     },
-    modalClose: function() {
+    modalClose: function () {
       var modal = document.getElementsByClassName("modal");
-      modal.forEach(element => {
+      modal.forEach((element) => {
         element.classList.remove("is-active");
       });
     },
-    sendEmail: e => {
+    sendEmail: (e) => {
       emailjs.init("user_NN9nBpNBUHCW5dh5dryPi");
       emailjs
         .sendForm(
@@ -128,35 +135,36 @@ export default {
           "user_NN9nBpNBUHCW5dh5dryPi"
         )
         .then(
-          result => {
+          (result) => {
             console.log("SUCCESS!", result.status, result.text);
             var input = document.getElementsByClassName("input");
-            input.forEach(element => {
+            input.forEach((element) => {
               element.value = "";
             });
             var modal = document.getElementsByClassName("modal2");
-            modal.forEach(element => {
+            modal.forEach((element) => {
               element.classList.add("is-active");
             });
           },
-          error => {
+          (error) => {
             console.log("FAILED...", error);
             var modal = document.getElementsByClassName("modal2");
-            document.getElementById('modaltitle').innerHTML ="Something went wrong... " + error;
-            modal.forEach(element => {
+            document.getElementById("modaltitle").innerHTML =
+              "Something went wrong... " + error;
+            modal.forEach((element) => {
               element.classList.add("is-active");
             });
           }
         );
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
-iframe{
-  height:700px;
-  width:800px;
+iframe {
+  height: 700px;
+  width: 800px;
 }
 .hero {
   background-image: url("../assets/pen.png");
@@ -179,9 +187,9 @@ iframe{
     margin-left: 0;
     margin-top: 17vh;
   }
-  iframe{
+  iframe {
     height: 90vh;
-    width:100vw;
+    width: 100vw;
   }
 }
 </style>

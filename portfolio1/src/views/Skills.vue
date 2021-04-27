@@ -14,8 +14,10 @@
           </div>
           <div class="column is-5 is-vcentered">
             <ul class="subtitle has-text-left-desktop is-3">
-              <li>HTML5</li>
-              <li>CSS3 + Sass</li>
+              <li>Google Cloud Platform</li>
+              <li>Amazon Web Services</li>
+              <li>Linux Ubuntu/Debian</li>
+              <li>CSS3/SASS/SCSS/mixins</li>
               <li>JavaScript</li>
               <li>PHP</li>
               <li>MySQL</li>
